@@ -1,0 +1,24 @@
+[project]
+name = "buddy-app"
+version = "0.1.0"
+description = "Local backend for the Buddy Chrome extension: right-click to save, chat with your saved memory via supermemory local."
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "httpx>=0.27",
+    "trafilatura>=1.8",
+    "pydantic>=2.6",
+    "supermemory>=3.0",  # REST API client SDK only — does NOT install the supermemory-server runtime, see README
+    "rich>=13.0",  # styled terminal onboarding
+]
+
+[project.scripts]
+buddy = "buddy.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["buddy*"]
