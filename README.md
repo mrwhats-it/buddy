@@ -11,12 +11,14 @@ Buddy has two separate local pieces: **supermemory itself** (the memory store, a
 1. Install supermemory (one time, outside this repo — Buddy can detect it but can't install or start it for you):
 
    **macOS / Linux:**
+
    ```bash
    curl -fsSL https://supermemory.ai/install | bash
    # or, on any OS with Node.js:  npx supermemory local
    ```
 
    **Windows** (no `curl | bash` — use Node.js):
+
    ```powershell
    npx supermemory local
    ```
@@ -37,6 +39,7 @@ Buddy has two separate local pieces: **supermemory itself** (the memory store, a
 2. Install and start the Buddy backend, in a second terminal:
 
    **macOS / Linux:**
+
    ```bash
    cd backend
    python3 -m venv .venv
@@ -46,6 +49,7 @@ Buddy has two separate local pieces: **supermemory itself** (the memory store, a
    ```
 
    **Windows (PowerShell):**
+
    ```powershell
    cd backend
    python -m venv .venv
@@ -71,7 +75,3 @@ Buddy has two separate local pieces: **supermemory itself** (the memory store, a
    - Select some text on any page, right-click → **Add to Buddy** (or **Add to Buddy with comment** to attach a note).
    - Right-click a link → same options — the backend fetches and extracts the article content automatically.
    - Click the extension icon to open the side panel and chat about what you've saved.
-
-## Status
-
-MVP — see `01-start.md` for what's implemented, what's assumed/unverified, and what's next.
